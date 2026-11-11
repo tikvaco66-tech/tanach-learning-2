@@ -1,0 +1,18 @@
+:root{--green:#244b45;--gold:#c79b4b;--cream:#fbf8f0;--ink:#263632}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,"Noto Sans Hebrew",sans-serif;line-height:1.65}
+.hero{padding:42px 18px 36px;text-align:center;color:white;background:linear-gradient(135deg,#1e403b,#376b5e)}
+.ornament{color:#f3d89b;font-size:.95rem;letter-spacing:.04em}
+h1{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.25;margin:14px auto;max-width:850px}
+.hero p{margin:0 auto;max-width:650px;color:#f4eee0}
+main{max-width:900px;margin:0 auto;padding:22px 16px 50px}
+h2{color:var(--green);font-size:1.35rem}
+.intro,.welcome-card{background:white;border:1px solid #e8dfcc;border-radius:18px;padding:20px;margin:14px 0 26px;box-shadow:0 5px 18px #243d3510}
+.grades{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grade{border:1px solid #d9c79f;border-radius:15px;background:#fff;padding:18px 12px;font-size:1.15rem;font-weight:bold;color:var(--green);cursor:pointer}
+.grade:active,.grade:focus{background:#f2e7cf;outline:2px solid var(--gold)}
+.content{margin-top:24px}
+.welcome-card{text-align:center}
+.star{font-size:2rem;color:var(--gold)}
+footer{text-align:center;padding:20px;color:#65736e;font-size:.9rem}
+@media(min-width:650px){.grades{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{padding:58px 24px}}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244b45">
+  <meta name="description" content="מסע לימודי בתנ״ך לתלמידי כיתות ג׳–ו׳">
+  <title>יוצאים למסע בעולם התנ״ך עם תקוה</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="ornament">✦ מסע של ידע, ערכים וגילוי ✦</div>
+    <h1>יוצאים למסע בעולם התנ״ך עם תקוה</h1>
+    <p>לומדים, מבינים, חושבים ומגלים את הסיפורים שמאחורי הפסוקים</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>ברוכים הבאים!</h2>
+      <p>בחרו שכבת גיל כדי להתחיל במסע הלמידה. בכל יחידה יופיעו סיכום, מילים חשובות, שאלות ותרגול.</p>
+    </section>
+
+    <section aria-labelledby="grades-title">
+      <h2 id="grades-title">לאיזו כיתה נצא למסע?</h2>
+      <div class="grades">
+        <button class="grade" data-grade="ג׳">כיתה ג׳</button>
+        <button class="grade" data-grade="ד׳">כיתה ד׳</button>
+        <button class="grade" data-grade="ה׳">כיתה ה׳</button>
+        <button class="grade" data-grade="ו׳">כיתה ו׳</button>
+      </div>
+    </section>
+
+    <section id="content" class="content" aria-live="polite">
+      <div class="welcome-card">
+        <span class="star">✧</span>
+        <h2>המסע מתחיל כאן</h2>
+        <p>בחרו כיתה. יחידות הלימוד המלאות ייטענו למאגר האתר לאחר איסוף ובדיקת התכנים.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© מסע בתנ״ך עם תקוה · סביבת למידה בעברית</footer>
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js"));
+    }
+  </script>
+</body>
+</html>
