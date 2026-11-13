@@ -1,5 +1,5 @@
-const CACHE = "masa-batanach-v2";
-const ASSETS = ["./","./index.html","./style.css","./app.js?v=2","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png"];
+const CACHE = "masa-batanach-v3";
+const ASSETS = ["./","./index.html","./style.css","./app.js?v=3","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
   self.skipWaiting();
