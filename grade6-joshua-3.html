@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>לומדים תנ״ך לעומק | יהושע פרק ג׳</title>
+<style>
+:root{--ink:#203047;--muted:#617086;--blue:#244d73;--gold:#c69a45;--paper:#fbf8f0;--line:#e5dfd2;--green:#e8f2e9;--red:#f8e9e6}
+*{box-sizing:border-box}body{margin:0;background:#f3f5f7;color:var(--ink);font-family:Arial,"Noto Sans Hebrew",sans-serif;line-height:1.65}
+header{background:linear-gradient(120deg,#173653,#315f7b);color:white;padding:28px 18px 24px}
+.wrap{max-width:980px;margin:auto;padding:0 16px}
+.kicker{color:#f3d99e;font-size:.9rem;font-weight:bold}
+h1{font-size:clamp(1.8rem,5vw,2.8rem);margin:4px 0}
+header p{margin:6px 0 0;color:#e9eff5}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.pill{border:1px solid #ffffff55;border-radius:99px;padding:4px 11px;font-size:.85rem}
+nav{display:flex;gap:8px;overflow:auto;padding:14px 0}
+nav button,.btn{border:0;border-radius:10px;padding:10px 14px;background:#e7edf2;color:#24435d;font-weight:bold;cursor:pointer;white-space:nowrap}
+nav button.active,.btn.primary{background:var(--blue);color:white}
+main{padding-bottom:44px}.panel{display:none;background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin:8px 0 18px;box-shadow:0 5px 18px #18334a0a}
+.panel.active{display:block}
+h2{margin:0 0 12px;font-size:1.45rem;color:#244d73}
+h3{color:#315f7b;margin:18px 0 6px}
+.callout{background:var(--paper);border-right:4px solid var(--gold);padding:12px 15px;border-radius:8px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.card{background:#fbfcfd;border:1px solid var(--line);border-radius:12px;padding:14px}
+.small{font-size:.9rem;color:var(--muted)}
+.question{border-top:1px solid var(--line);padding:16px 0}
+.question:first-child{border-top:0}
+.level{display:inline-block;font-size:.78rem;padding:3px 9px;border-radius:20px;background:#edf2f6;color:#31536c;margin-bottom:6px}
+.options{display:grid;gap:7px;margin:10px 0}
+.options button{border:1px solid #d6dee5;border-radius:9px;padding:10px;text-align:right;background:white;color:var(--ink);cursor:pointer}
+.options button:hover{border-color:var(--blue);background:#f6f9fb}
+.options button.correct{background:var(--green);border-color:#77a77c}
+.options button.wrong{background:var(--red);border-color:#c77b70}
+.feedback{display:none;padding:10px 12px;border-radius:9px;background:#f2f5f7;margin-top:8px}
+.feedback.show{display:block}
+textarea{width:100%;min-height:80px;border:1px solid #ccd5dc;border-radius:9px;padding:10px;font:inherit}
+details{background:#f8fafb;border:1px solid var(--line);border-radius:9px;padding:10px;margin-top:8px}
+summary{cursor:pointer;font-weight:bold}
+.progress{height:8px;background:#e8edf1;border-radius:99px;overflow:hidden;margin:10px 0}
+.progress span{display:block;height:100%;width:0;background:#4d8763;transition:width .2s}
+.sort-list{display:grid;gap:8px;counter-reset:item}
+.sort-item{padding:11px;border:1px solid var(--line);border-radius:9px;background:#fff;display:flex;align-items:center;gap:8px}
+.sort-item select{margin-right:auto;padding:6px;border:1px solid #cbd5dd;border-radius:7px}
+footer{color:var(--muted);font-size:.85rem;padding:10px 0 30px}
+@media print{header,nav,.no-print,footer{display:none!important}body{background:white}.panel{display:block!important;border:0;box-shadow:none;page-break-inside:avoid}.question{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="kicker">סביבת למידה דיגיטלית • חינוך ממלכתי</div>
+<h1>חציית הירדן – צעד אל הארץ</h1>
+<p>ספר יהושע, פרק ג׳ | יחידת פיילוט לכיתה ו׳</p>
+<div class="meta"><span class="pill">סיכום מדורג</span><span class="pill">30 שאלות</span><span class="pill">משחק רצף אירועים</span><span class="pill">כלי למורה</span></div>
+</div>
+</header>
+<main class="wrap">
+<nav class="no-print">
+<button class="active" data-tab="learn">לומדים את הפרק</button>
+<button data-tab="quiz">מאגר השאלות</button>
+<button data-tab="game">משחקים</button>
+<button data-tab="teacher">למורה</button>
+</nav>
+
+<section id="learn" class="panel active">
+<h2>1. מבינים את הסיפור</h2>
+<div class="callout"><b>הרעיון המרכזי:</b> חציית הירדן היא אירוע מעבר משמעותי: בני ישראל עומדים להיכנס לארץ, יהושע מתבסס כמנהיג, והעם חווה אירוע שמזכיר את קריעת ים סוף ומחזק את אמונו בהנהגה.</div>
+<h3>הרקע</h3>
+<p>בני ישראל נמצאים בעבר הירדן המזרחי, סמוך לנהר הירדן. הם עומדים לעבור אל הארץ. יהושע הוא המנהיג לאחר מות משה, והמעבר הוא רגע חשוב לעם ולמנהיגו.</p>
+<h3>מהלך הפרק לפי רצף הפסוקים</h3>
+<div class="grid">
+<div class="card"><b>פסוקים א׳–ד׳ | ההכנות</b><p>יהושע משכים בבוקר, והעם מגיע אל הירדן וחונה לפני המעבר. לאחר שלושה ימים השוטרים עוברים במחנה ומורים לעם ללכת בעקבות ארון הברית, כאשר נשמר מרחק של כאלפיים אמה ממנו.</p></div>
+<div class="card"><b>פסוקים ה׳–ח׳ | ההנחיות</b><p>יהושע אומר לעם להתקדש לקראת הנפלאות שיתרחשו למחרת. הוא מצווה על הכוהנים לשאת את ארון הברית ולצעוד לפני העם. ה׳ מבטיח ליהושע שיגדל בעיני ישראל, כפי שהיה עם משה.</p></div>
+<div class="card"><b>פסוקים ט׳–י״ג | ההכרזה</b><p>יהושע מכנס את העם ומודיע שהאירוע יבהיר כי אל חי בקרבם וכי ה׳ יוריש מפניהם את עמי כנען. הוא מתאר את עצירת המים כאשר כפות רגלי הכוהנים נושאי הארון ייגעו במי הירדן.</p></div>
+<div class="card"><b>פסוקים י״ד–י״ז | הנס והמעבר</b><p>הכוהנים נכנסים למים, והירדן – שהיה מלא על גדותיו בימי הקציר – נעצר. המים העומדים מצפון נערמים, והמים הזורמים דרומה נכרתים. הכוהנים עומדים בחרבה בתוך הירדן, וכל העם עובר בחרבה מול יריחו.</p></div>
+</div>
+<h3>מושגים שכדאי להכיר</h3>
+<ul>
+<li><b>ארון הברית:</b> כלי מקודש המסמל את הברית ואת נוכחות ה׳ בקרב העם.</li>
+<li><b>התקדשו:</b> היטהרו והיערכו מבחינה רוחנית לקראת אירוע מיוחד.</li>
+<li><b>אלפיים אמה:</b> מרחק שנועד לשמור על רווח בין העם לבין הארון, כדי שהעם יוכל לראות את הדרך שבה ילך.</li>
+<li><b>הירדן מלא על כל גדותיו:</b> הנהר גאה והמים הגיעו עד שפת גדותיו; לכן המעבר נראה קשה במיוחד.</li>
+<li><b>חרבה:</b> קרקע יבשה.</li>
+<li><b>נד אחד:</b> הצטברות או עמידה של המים כמחסום/ערימה.</li>
+</ul>
+<h3>דמויות ותפקידים</h3>
+<div class="grid">
+<div class="card"><b>יהושע</b><p>המנהיג שמנחה את העם, מעביר את דברי ה׳ ומוביל את ההכנות למעבר.</p></div>
+<div class="card"><b>הכוהנים</b><p>נושאים את ארון הברית, צועדים לפני העם ועומדים בתוך הירדן עד שהעם מסיים לעבור.</p></div>
+<div class="card"><b>השוטרים</b><p>עוברים במחנה ומעבירים לעם את הוראות ההיערכות וההליכה בעקבות הארון.</p></div>
+<div class="card"><b>בני ישראל</b><p>מתכוננים, הולכים בעקבות הארון וחוצים את הירדן ביבשה.</p></div>
+</div>
+<div class="callout"><b>דיוק חשוב:</b> בפרק ג׳ נבחרים שנים עשר אנשים, אחד מכל שבט (פסוק י״ב), אך תפקידם אינו מוסבר בפרק זה. לקיחת שתים עשרה האבנים מתוארת בפרק ד׳. אין לייחס את משימת האבנים לפרק ג׳.</div>
+<h3>שאלות לחשיבה ולשיחה</h3>
+<ol>
+<li>מדוע לדעתכם נפתח ספר יהושע באירועים שמבססים את מנהיגותו של יהושע?</li>
+<li>מה דומה ומה שונה בין חציית הירדן לבין קריעת ים סוף?</li>
+<li>מדוע חשוב שהכוהנים נשארו בתוך הירדן עד שכל העם עבר?</li>
+<li>איזה מסר מקבל העם מן העובדה שהמעבר מתרחש דווקא כשהירדן מלא על גדותיו?</li>
+</ol>
+</section>
+
+<section id="quiz" class="panel">
+<h2>2. מאגר שאלות – 30 שאלות</h2>
+<p class="small">השאלות מחולקות לרמות חשיבה. בשאלות הסגורות אפשר לבדוק תשובה ולקבל הסבר. בשאלות הפתוחות מוצגים כיווני תשובה למורה.</p>
+<div class="progress"><span id="bar"></span></div><p id="scoreline" class="small">טרם נבדקו תשובות.</p>
+<div id="questions"></div>
+</section>
+
+<section id="game" class="panel">
+<h2>3. משחק – מסדרים את המעבר</h2>
+<p>בחרו לכל אירוע את המקום הנכון ברצף. לאחר מכן לחצו על בדיקת הסדר.</p>
+<div id="sortgame" class="sort-list"></div>
+<button class="btn primary" onclick="checkSort()">בדיקת הסדר</button>
+<p id="sortfeedback" aria-live="polite"></p>
+<h3>אתגר חוקר התנ״ך</h3>
+<div class="card">
+<p><b>משימת הסבר:</b> הסבירו כיצד חציית הירדן מחזקת את מעמדו של יהושע כמנהיג.</p>
+<textarea placeholder="כתבו כאן את תשובתכם..."></textarea>
+<details><summary>הצגת כיווני תשובה</summary>
+<p>אפשר לציין שה׳ מבטיח ליהושע כי יגדל בעיני ישראל; האירוע מתרחש לעיני העם; יהושע מוסר את ההנחיות ומוביל את ההיערכות; והנס מזכיר לעם את התמיכה האלוהית שהייתה במשה.</p></details>
+</div>
+</section>
+
+<section id="teacher" class="panel">
+<h2>4. אזור למורה</h2>
+<div class="grid">
+<div class="card"><b>מטרות למידה</b><ul><li>שחזור רצף האירועים בפרק.</li><li>הבנת תפקידם של יהושע, הכוהנים והשוטרים.</li><li>הסבר משמעות ארון הברית והמרחק ממנו.</li><li>הסקת מסקנות על מנהיגות ואמונה מתוך הכתוב.</li><li>ביסוס תשובה באמצעות פסוקים.</li></ul></div>
+<div class="card"><b>הצעה להערכה</b><ul><li>ידע ואיתור פרטים – 30%.</li><li>הבנה ורצף – 25%.</li><li>הסקה ופרשנות – 25%.</li><li>נימוק וביסוס בפסוקים – 20%.</li></ul></div>
+</div>
+<h3>מחוון לשאלות פתוחות</h3>
+<table style="width:100%;border-collapse:collapse">
+<tr><th style="text-align:right;border-bottom:1px solid #ddd;padding:8px">רמה</th><th style="text-align:right;border-bottom:1px solid #ddd;padding:8px">מאפייני התשובה</th></tr>
+<tr><td style="padding:8px;border-bottom:1px solid #eee">מלאה</td><td style="padding:8px;border-bottom:1px solid #eee">תשובה מדויקת, הסבר ברור והסתמכות על פרט או פסוק מתאים.</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid #eee">חלקית</td><td style="padding:8px;border-bottom:1px solid #eee">רעיון נכון אך חסר הסבר או ביסוס.</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid #eee">ראשונית</td><td style="padding:8px;border-bottom:1px solid #eee">תשובה כללית, לא מדויקת או שאינה מתייחסת לשאלה.</td></tr>
+</table>
+<p class="small">אפשר להדפיס את היחידה או לשמור אותה כקובץ PDF באמצעות אפשרות ההדפסה של הדפדפן.</p>
+<button class="btn primary no-print" onclick="window.print()">הדפסה / שמירה כ-PDF</button>
+</section>
+<footer>
+<p><b>מקורות לבקרה:</b> נוסח יהושע ג׳ במקרא; משרד החינוך – מרחב פדגוגי, יהושע ג׳–ה׳, כיתה ו׳. יחידת הפיילוט דורשת אישור פדגוגי סופי לפני שימוש כמוצר רשמי.</p>
+<p><a href="https://pop.education.gov.il/tchumey_daat/tanach_mamlachti/yesodi/noseem_nilmadim/haziyat-yarden/" target="_blank" rel="noopener">חומרי משרד החינוך על חציית הירדן</a> · <a href="https://he.wikisource.org/wiki/יהושע_ג" target="_blank" rel="noopener">נוסח יהושע פרק ג׳</a></p>
+</footer>
+</div>
+</main>
+<script>
+const qs=[
+["איתור מידע","מאין יצאו בני ישראל בתחילת הפרק?",["מהשיטים","מיריחו","מירושלים"],0,"פסוק א׳ מציין שיהושע והעם נסעו מהשיטים אל הירדן.","פסוק א׳"],
+["איתור מידע","לאן הגיעו בני ישראל וחיכו לפני המעבר?",["אל נהר הירדן","אל ים סוף","אל הר סיני"],0,"העם הגיע עד הירדן ולן שם לפני שעברו.","פסוק א׳"],
+["איתור מידע","מי עברו בקרב המחנה לאחר שלושת הימים?",["השוטרים","המרגלים","הכוהנים"],0,"השוטרים עברו במחנה והעבירו את ההוראות.","פסוק ב׳"],
+["הבנת הוראות","אחרי מי נצטוו בני ישראל ללכת?",["אחרי ארון הברית שנשאו הכוהנים","אחרי יהושע לבדו","אחרי השוטרים"],0,"העם נצטווה ללכת בעקבות ארון הברית.","פסוק ג׳"],
+["איתור מידע","מה היה המרחק שנקבע בין העם לבין הארון?",["כאלפיים אמה","כמאה אמה","עשרת אלפים אמה"],0,"המרחק המתואר הוא כאלפיים אמה.","פסוק ד׳"],
+["הבנת משמעות","מדוע נאמר לעם לשמור מרחק מהארון?",["כדי שיוכלו לדעת את הדרך שבה ילכו","כדי שלא יראו את הכוהנים","כדי להישאר במחנה"],0,"הכתוב מסביר שהמרחק נועד לאפשר לעם לדעת את הדרך, כי לא עברו בה קודם.","פסוק ד׳"],
+["אוצר מילים","מה פירוש הציווי ״התקדשו״ בהקשר הפרק?",["היטהרו והיערכו לקראת אירוע מיוחד","צאו למלחמה מיד","התרחקו מהנהר"],0,"יהושע מכין את העם מבחינה רוחנית לקראת הנפלאות.","פסוק ה׳"],
+["איתור מידע","מה הבטיח יהושע לעם שיתרחש למחרת?",["ה׳ יעשה בקרבם נפלאות","הירדן יתייבש לעולם","העם יחזור לשיטים"],0,"יהושע הודיע שלמחרת יתרחשו נפלאות.","פסוק ה׳"],
+["איתור מידע","מה ציווה יהושע על הכוהנים?",["לשאת את ארון הברית ולעבור לפני העם","לבנות מזבח","לשלוח מרגלים ליריחו"],0,"הכוהנים נושאי הארון נצטוו לצעוד לפני העם.","פסוק ו׳"],
+["הבנת משמעות","מה מבטיח ה׳ ליהושע בפסוק ז׳?",["שיגדל בעיני ישראל ויכירו שה׳ איתו כפי שהיה עם משה","שהוא יישאר במדבר","שהוא לא יצטרך להנהיג"],0,"ה׳ מבטיח לבסס את מעמד יהושע כמנהיג.","פסוק ז׳"],
+["איתור מידע","היכן נצטוו הכוהנים לעמוד?",["בתוך הירדן","על הר סיני","בשער יריחו"],0,"יהושע מצווה על הכוהנים לעמוד בירדן כשיגיעו אליו.","פסוק ח׳"],
+["הבנת מסר","מה יהושע מבקש מהעם לעשות בפסוק ט׳?",["לגשת ולשמוע את דברי ה׳","לחזור לאוהלים","להתרחק מהירדן"],0,"יהושע מכנס את העם כדי שישמע את דברי ה׳.","פסוק ט׳"],
+["איתור מידע","מה מבקש יהושע להראות לעם באמצעות האירוע?",["שהאל החי בקרבם יוריש מפניהם את עמי כנען","שהירדן אינו עמוק","שאין צורך במנהיג"],0,"האירוע נועד להיות סימן לנוכחות ה׳ ולסיועו בהורשת העמים.","פסוק י׳"],
+["איתור מידע","כמה אנשים נבחרו, לפי פסוק י״ב?",["שנים עשר – אחד מכל שבט","שבעה","שבעים"],0,"הכתוב מציין שנים עשר אנשים, איש אחד מכל שבט.","פסוק י״ב"],
+["דיוק בקריאה","מה מתואר שיקרה כאשר רגלי הכוהנים ייגעו במי הירדן?",["המים היורדים מלמעלה ייעצרו ויעמדו כנד","הנהר יעמיק","המים יהפכו לדם"],0,"כך מתואר הנס בפסוק י״ג.","פסוק י״ג"],
+["איתור מידע","כיצד מתואר מצב הירדן בימי הקציר?",["מלא על כל גדותיו","יבש לחלוטין","רדוד מאוד"],0,"הירדן היה מלא על גדותיו, דבר שמדגיש את הקושי שבמעבר.","פסוק ט״ו"],
+["הבנת רצף","מה קרה לאחר שרגלי הכוהנים נטבלו בקצה המים?",["המים נעצרו והעם עבר ביבשה","הכוהנים חזרו למחנה","העם המתין עוד שלושה ימים"],0,"המים נעצרו והמעבר התאפשר בחרבה.","פסוקים ט״ו–ט״ז"],
+["איתור מידע","לאיזה אזור הגיעו בני ישראל לאחר המעבר?",["מול יריחו","מול מצרים","מול שילה"],0,"הכתוב מציין שהעם עבר נגד יריחו.","פסוק ט״ז"],
+["הבנת משמעות","מה פירוש המילה ״בחרבה״?",["ביבשה, בקרקע יבשה","במים עמוקים","בלילה"],0,"חרבה היא קרקע יבשה.","פסוק י״ז"],
+["איתור מידע","מי נשארו עומדים בתוך הירדן עד שכל העם סיים לעבור?",["הכוהנים נושאי ארון הברית","השוטרים","זקני העם"],0,"הכוהנים עמדו בחרבה בתוך הירדן עד תום מעבר העם.","פסוק י״ז"],
+["רצף אירועים","מה התרחש תחילה?",["העם הגיע לירדן וחנה שם","המים נעצרו","הכוהנים עמדו במרכז הירדן"],0,"תחילה העם הגיע לירדן וחנה לפני המעבר.","פסוק א׳"],
+["הבנת דמויות","מה היה תפקידם המרכזי של השוטרים בפרק?",["להעביר לעם את הוראות ההיערכות","לשאת את ארון הברית","לעצור את מי הירדן"],0,"השוטרים עברו במחנה והעבירו את ההוראות.","פסוקים ב׳–ד׳"],
+["הסקת מסקנות","כיצד האירוע מחזק את מעמד יהושע?",["העם רואה שה׳ איתו ושדבריו מתגשמים","יהושע מבטל את תפקיד הכוהנים","העם בוחר מנהיג אחר"],0,"ה׳ אומר שיגדל בעיני ישראל, והאירוע מתרחש לעיני העם.","פסוק ז׳ ובהמשך הפרק"],
+["השוואה","איזה אירוע קודם בתולדות העם מזכיר את חציית הירדן?",["קריעת ים סוף","מעמד הר סיני","מכירת יוסף"],0,"בשני האירועים העם עובר בתוך מים שנבקעו/נעצרו בדרך נס.","השוואה בין שמות י״ד ליהושע ג׳"],
+["הסקת מסקנות","מדוע משמעותי שהירדן היה מלא על גדותיו?",["המעבר נראה בלתי אפשרי בדרך רגילה, ולכן הנס מודגש","המעבר נעשה קל יותר","העם לא היה צריך לחצות"],0,"המצב הטבעי של הנהר מדגיש את גודל האירוע.","פסוק ט״ו"],
+["הבנת מסר","מה מסמל ארון הברית כשהוא הולך לפני העם?",["הובלה וסימן לנוכחות ה׳ בקרב העם","רכושו הפרטי של יהושע","כלי מלחמה"],0,"הארון הוא סמל מקודש לברית ולנוכחות האלוהית.","פסוקים ג׳, י״א, י״ז"],
+["חשיבה ביקורתית","איזו ראיה מהפרק תומכת בכך שיהושע פועל כמנהיג?",["הוא מוסר הוראות, מכנס את העם ומנחה את הכוהנים","הוא עוזב את המחנה","הוא אינו מדבר עם העם"],0,"הפרק מציג את יהושע כמנהיג פעיל שמארגן את העם ומעביר את דבר ה׳.","פסוקים ה׳–ט׳"],
+["דיוק בפרק","מה תפקידם של שנים עשר האנשים בפרק ג׳?",["הפרק מציין את בחירתם אך אינו מפרט כאן את משימתם","הם נושאים את הארון","הם עוצרים את המים"],0,"הבחירה מופיעה בפסוק י״ב; לקיחת האבנים מוסברת בפרק ד׳.","פסוק י״ב והשוואה ליהושע ד׳"],
+["פרשנות","מה אפשר ללמוד מכך שהכוהנים עומדים במים עד שהעם כולו עובר?",["הם ממלאים תפקיד של אחריות והובלה המאפשר מעבר לכל העם","הם מתחרים ביהושע","הם אינם חלק מהאירוע"],0,"הכוהנים נשארים במקומם עד להשלמת המעבר של כל העם.","פסוק י״ז"],
+["יישום","איזה רעיון מנהיגותי אפשר ללמוד מהפרק?",["מנהיגות כוללת הכנה, מתן הנחיות ודאגה לכך שהציבור יוכל להתקדם","מנהיגות פירושה לפעול לבד","מנהיגות אינה דורשת אחריות"],0,"הפרק מציג תכנון, תקשורת, הובלה ואחריות כלפי העם.","פסוקים א׳–י״ז"]
+];
+const openQs=[
+["הבנה","הסבירו במילים שלכם מדוע העם נדרש לשמור מרחק של כאלפיים אמה מארון הברית.","יש לציין שהמרחק נועד לאפשר לעם לראות את הארון ולדעת את הדרך, משום שלא עברו בה קודם.","פסוק ד׳"],
+["רצף","תארו את שלבי ההכנות למעבר הירדן, מהגעת העם ועד כניסת הכוהנים למים.","הגעה וחניה; הוראות השוטרים; הליכה בעקבות הארון; התקדשות; הוראת יהושע לכוהנים.","פסוקים א׳–ח׳"],
+["דמות ומנהיגות","כיצד מבסס יהושע את מעמדו כמנהיג בפרק? הביאו שתי דוגמאות.","ה׳ מבטיח שיגדל בעיני ישראל; יהושע מוסר הוראות, מכנס את העם ומוביל את ההיערכות.","פסוקים ה׳–ט׳"],
+["פרשנות","מה משמעות הביטוי ״אל חי בקרבכם״ בהקשר של הפרק?","האירוע נועד להמחיש לעם את נוכחות ה׳ ואת כוחו לסייע להם בכניסה לארץ.","פסוק י׳"],
+["השוואה","ציינו שני קווי דמיון בין חציית הירדן לקריעת ים סוף.","בשני האירועים העם עובר בתוך אזור מים שנפתח/נעצר בדרך נס; בשניהם האירוע מחזק את אמונת העם בהנהגה האלוהית.","שמות י״ד; יהושע ג׳"],
+["הסקה","מדוע לדעתכם מדגיש הכתוב שהירדן היה מלא על כל גדותיו?","הדגשת הקושי הטבעי מבליטה את גודל הנס ואת העובדה שהמעבר לא היה פשוט בתנאים רגילים.","פסוק ט״ו"],
+["ביסוס בפסוקים","בחרו פסוק אחד שמראה את תפקיד הכוהנים והסבירו כיצד הוא תורם להבנת הפרק.","למשל פסוק י״ז: הכוהנים עומדים בתוך הירדן עם הארון עד שכל העם מסיים לעבור.","פסוק י״ז"],
+["הערכת פעולה","האם לדעתכם היה חשוב שהכוהנים יישארו בתוך הירדן עד שהאדם האחרון יעבור? נמקו מתוך הפרק.","תשובה מנומקת יכולה להדגיש אחריות, הנהגה, ביטחון העם והשלמת המשימה עבור כולם.","פסוק י״ז"],
+["חשיבה יצירתית","כתבו יומן קצר מנקודת מבטו של ילד מבני ישראל שחוצה את הירדן. שלבו שני פרטים מדויקים מהפרק.","יש לבדוק שילוב פרטים נכונים: הנהר הגואה, ארון הברית, הכוהנים, עצירת המים או המעבר מול יריחו.","פסוקים ג׳–י״ז"],
+["סינתזה","נסחו במשפט אחד את הרעיון המרכזי של פרק ג׳, והסבירו כיצד שני אירועים בפרק תומכים בו.","תשובה אפשרית: חציית הירדן מסמנת את תחילת הכניסה לארץ ומבססת את הנהגת יהושע; ההבטחה ליהושע והנס לעיני העם תומכים בכך.","פסוקים ז׳, י״ד–י״ז"]
+];
+const root=document.getElementById('questions');
+qs.forEach((q,i)=>{
+ const d=document.createElement('div');d.className='question';
+ d.innerHTML=`<span class="level">${q[0]}</span><b>${i+1}. ${q[1]}</b><div class="options"></div><div class="feedback"></div>`;
+ const opts=d.querySelector('.options');
+ q[2].forEach((o,j)=>{const b=document.createElement('button');b.textContent=o;b.onclick=()=>{
+  if(d.dataset.done)return;
+  d.dataset.done='1';const ok=j===q[3];b.classList.add(ok?'correct':'wrong');
+  if(!ok)opts.children[q[3]].classList.add('correct');
+  const f=d.querySelector('.feedback');f.classList.add('show');f.innerHTML=`<b>${ok?'נכון!':'לא מדויק.'}</b> ${q[4]} <span class="small">(${q[5]})</span>`;
+  updateScore();
+ };opts.appendChild(b)});
+ root.appendChild(d);
+});
+const openTitle=document.createElement('h3');openTitle.textContent='שאלות פתוחות – הסבר, נימוק וחשיבה';root.appendChild(openTitle);
+openQs.forEach((q,i)=>{
+ const d=document.createElement('div');d.className='question';
+ d.innerHTML=`<span class="level">${q[0]}</span><b>${i+31}. ${q[1]}</b><textarea placeholder="כתבו תשובה..."></textarea><details><summary>מחוון / כיווני תשובה</summary><p>${q[2]}</p><span class="small">${q[3]}</span></details>`;
+ root.appendChild(d);
+});
+function updateScore(){const done=[...root.querySelectorAll('.question[data-done]')];const correct=done.filter(d=>d.querySelector('.correct')&&d.querySelector('.feedback').innerText.startsWith('נכון!')).length;document.getElementById('bar').style.width=(done.length/30*100)+'%';document.getElementById('scoreline').textContent=`נבדקו ${done.length} מתוך 30 שאלות סגורות | ${correct} תשובות נכונות.`}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')});
+const events=["יהושע והעם מגיעים לירדן וחונים לפני המעבר","השוטרים עוברים במחנה ומעבירים את הוראות ההליכה בעקבות הארון","יהושע מצווה על העם להתקדש לקראת הנפלאות","הכוהנים נושאי הארון נכנסים אל הירדן","המים נעצרים והעם עובר בחרבה מול יריחו","הכוהנים עומדים בתוך הירדן עד שכל העם מסיים לעבור"];
+const shuffled=[3,0,5,2,4,1];
+const game=document.getElementById('sortgame');
+shuffled.forEach((n,i)=>{const row=document.createElement('div');row.className='sort-item';row.innerHTML=`<span>${events[n]}</span><select aria-label="מיקום ברצף"><option value="">בחרו סדר</option>${events.map((_,j)=>`<option value="${j+1}">${j+1}</option>`).join('')}</select>`;game.appendChild(row)});
+function checkSort(){const vals=[...game.querySelectorAll('select')].map(x=>Number(x.value));const correct=[1,2,3,4,5,6];const ok=vals.length===6&&vals.every((v,i)=>v===correct[i])&&new Set(vals).size===6;document.getElementById('sortfeedback').textContent=ok?'כל הכבוד! סידרתם נכון את רצף האירועים.':'עדיין לא מדויק. חשבו מה קורה תחילה, מהן ההכנות, ומה מתרחש רק לאחר כניסת הכוהנים למים.'}
+</script>
+</body>
+</html>
