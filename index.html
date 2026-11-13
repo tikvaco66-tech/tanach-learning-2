@@ -1,53 +1,11 @@
 <!doctype html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#244b45">
-  <meta name="description" content="מסע לימודי בתנ״ך לתלמידי כיתות ג׳–ו׳">
-  <title>יוצאים למסע בעולם התנ״ך עם תקוה</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="hero">
-    <div class="ornament">✦ מסע של ידע, ערכים וגילוי ✦</div>
-    <h1>יוצאים למסע בעולם התנ״ך עם תקוה</h1>
-    <p>לומדים, מבינים, חושבים ומגלים את הסיפורים שמאחורי הפסוקים</p>
-  </header>
-
-  <main>
-    <section class="intro">
-      <h2>ברוכים הבאים!</h2>
-      <p>בחרו שכבת גיל כדי להתחיל במסע הלמידה. בכל יחידה יופיעו סיכום, מילים חשובות, שאלות ותרגול.</p>
-    </section>
-
-    <section aria-labelledby="grades-title">
-      <h2 id="grades-title">לאיזו כיתה נצא למסע?</h2>
-      <div class="grades">
-        <button class="grade" data-grade="3">כיתה ג׳</button>
-        <button class="grade" data-grade="4">כיתה ד׳</button>
-        <button class="grade" data-grade="5">כיתה ה׳</button>
-        <button class="grade" data-grade="6">כיתה ו׳</button>
-      </div>
-    </section>
-
-    <section id="content" class="content" aria-live="polite">
-      <div class="welcome-card">
-        <span class="star">✧</span>
-        <h2>המסע מתחיל כאן</h2>
-        <p>בחרו כיתה. יחידות הלימוד המלאות ייטענו למאגר האתר לאחר איסוף ובדיקת התכנים.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>© מסע בתנ״ך עם תקוה · סביבת למידה בעברית</footer>
-  <script src="app.js?v=3"></script>
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js"));
-    }
-  </script>
-</body>
-</html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#173d38"><meta name="description" content="מסע חווייתי ומעמיק בעולם התנ״ך לתלמידי כיתות ג׳–ו׳"><title>מסע בתנ״ך עם תקוה | לומדים. חושבים. מגלים.</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css?v=4"></head>
+<body><header class="topbar"><a class="brand" href="./"><span class="brand-mark">ת׳</span><span><strong>מסע בתנ״ך</strong><small>עם תקוה</small></span></a><a class="top-link" href="#grades">מתחילים ללמוד <span>←</span></a></header>
+<main><section class="hero"><div class="hero-copy"><div class="eyebrow"><span></span> סביבת למידה לתלמידי כיתות ג׳–ו׳</div><h1>פותחים את התנ״ך.<br><em>מגלים עולם שלם.</em></h1><p class="hero-lead">לומדים את הסיפורים לעומק, מבינים את הדמויות והבחירות, שואלים שאלות ומגלים מה אפשר לקחת מהם לחיים שלנו.</p><a class="primary-cta" href="#grades">בואו נצא למסע <span>←</span></a><div class="hero-note"><span class="spark">✦</span> למידה עצמאית · שאלות לחשיבה · משחקי ידע</div></div>
+<div class="hero-art" aria-label="איור של ספר תנ״ך פתוח"><div class="sun-disc"></div><div class="arch arch-back"></div><div class="arch arch-front"></div><div class="book"><div class="book-page page-left"></div><div class="book-page page-right"></div><div class="book-spine"></div><span class="book-star">✦</span></div><div class="floating f-one">חכמה</div><div class="floating f-two">ערכים</div><div class="floating f-three">גילוי</div></div></section>
+<section class="intro-strip"><div><span class="strip-icon">01</span><strong>קוראים ומבינים</strong><small>סיכומי עומק בשפה בהירה</small></div><div><span class="strip-icon">02</span><strong>חושבים ושואלים</strong><small>שאלות ברמות חשיבה מגוונות</small></div><div><span class="strip-icon">03</span><strong>מתרגלים ומגלים</strong><small>חידונים ומשימות למידה</small></div></section>
+<section class="grades-section" id="grades"><div class="section-heading"><div><div class="eyebrow">המסע שלך מתחיל כאן</div><h2>בחרו את הכיתה שלכם</h2></div><p>כל כיתה יוצאת למסע משלה, בעקבות פרקי התנ״ך ותוכנית הלימודים.</p></div>
+<div class="grade-grid"><button class="grade-card grade-3" data-grade="3"><span class="grade-number">03</span><span class="grade-label">כיתה</span><strong>ג׳</strong><span class="grade-desc">סיפורי האבות וראשית הדרך</span><span class="grade-action">כניסה ללמידה ←</span></button><button class="grade-card grade-4" data-grade="4"><span class="grade-number">04</span><span class="grade-label">כיתה</span><strong>ד׳</strong><span class="grade-desc">מסעות, מנהיגות ובחירה</span><span class="grade-action">כניסה ללמידה ←</span></button><button class="grade-card grade-5" data-grade="5"><span class="grade-number">05</span><span class="grade-label">כיתה</span><strong>ה׳</strong><span class="grade-desc">דמויות, אתגרים וערכים</span><span class="grade-action">כניסה ללמידה ←</span></button><button class="grade-card grade-6" data-grade="6"><span class="grade-number">06</span><span class="grade-label">כיתה</span><strong>ו׳</strong><span class="grade-desc">מנהיגות, עם וארץ</span><span class="grade-action">כניסה ללמידה ←</span></button></div></section>
+<section id="content" class="learning-area" aria-live="polite"><div class="empty-state"><span class="empty-star">✦</span><h2>הסיפור הבא מחכה לכם</h2><p>בחרו כיתה למעלה כדי להיכנס ליחידות הלימוד.</p></div></section></main>
+<footer><div class="footer-brand">מסע בתנ״ך <span>✦</span> עם תקוה</div><p>לומדים את העבר, חושבים על ההווה, ומגלים דרך לעתיד.</p></footer>
+<script src="app.js?v=4"></script><script>if("serviceWorker"in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js"));}</script></body></html>
