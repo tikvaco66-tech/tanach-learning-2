@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#142b28"><meta name="description" content="יוצאים למסע בעולם התנ״ך עם תקווה – סביבת למידה לתלמידי כיתות ג׳–ו׳">
 <title>יוצאים למסע בעולם התנ״ך עם תקווה</title>
-<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css?v=11">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 <header class="topbar"><a class="brand" href="./"><span class="brand-seal">ת</span><span><strong>יוצאים למסע בעולם התנ״ך</strong><small>לומדים, חוקרים ומגלים עם תקווה</small></span></a><a class="top-link" href="curriculum-grades-3-6.html">מאגר מלא ג׳–ו׳ <span>←</span></a><a class="top-link" href="chapters.html">מפת כל הפרקים <span>←</span></a><a class="top-link" href="all-required-chapters.html">רשימת כל פרקי החובה <span>←</span></a><a class="top-link" href="#grades">לבחירת הכיתה <span>↓</span></a></header>
@@ -28,5 +28,5 @@
 </div></section>
 <section id="content" class="learning-area" aria-live="polite"><div class="empty-state"><span class="empty-star">✦</span><h2>הפרק הבא מחכה לכם</h2><p>בחרו כיתה כדי לראות את הפרקים ויחידות הלימוד הזמינים בה.</p></div></section>
 </main><footer><div class="footer-brand">יוצאים למסע בעולם התנ״ך <span>✦</span> עם תקווה</div><p>לומדים את העבר, חושבים על ההווה ומגלים ערכים שילוו אותנו הלאה.</p></footer>
-<script src="app.js?v=13"></script><script>if("serviceWorker"in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js"));}</script>
+<script>document.querySelectorAll(".grade-card").forEach(card=>card.addEventListener("click",function(e){e.preventDefault();e.stopImmediatePropagation();const grade=this.dataset.grade;location.href="curriculum-grades-3-6.html#g"+grade;} ,true));</script><script src="app.js?v=13"></script><script>if("serviceWorker"in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js"));}</script>
 </body></html>
