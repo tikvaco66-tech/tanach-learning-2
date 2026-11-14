@@ -94,3 +94,62 @@ footer{border-top:1px solid #d9b66f66}
 @media(max-width:850px){.hero{min-height:610px}.grade-grid{gap:14px}}
 @media(max-width:600px){.topbar{height:auto;min-height:70px;flex-wrap:wrap;gap:8px;padding:12px}.brand{width:100%}.top-link{font-size:11px;padding:7px 9px}.hero{min-height:620px;border-radius:0 0 22px 22px}.hero-copy{width:100%;padding:62px 24px 110px}.hero h1{font-size:58px}.hero-lead{font-size:17px}.intro-strip{margin-top:18px;padding:20px}.grades-section{padding-top:20px}.grade-card{min-height:215px;padding:20px 15px}.grade-card>strong{font-size:35px}.grade-number{font-size:55px}.learning-area{padding:18px;margin-bottom:40px}}
 @media(prefers-reduced-motion:reduce){.hero:before,.brand-seal{animation:none}}
+
+
+/* ===== WOW EXPERIENCE: cinematic light, depth and motion ===== */
+:root{--wow-gold:#ffe2a0;--wow-teal:#72e0c0;--wow-violet:#b7a1ff}
+body{background:radial-gradient(ellipse at 8% 18%,#174b3d 0,transparent 28%),radial-gradient(ellipse at 92% 42%,#49386a 0,transparent 30%),linear-gradient(145deg,#071713,#102d26 48%,#0a1c20);background-attachment:fixed}
+.topbar{background:linear-gradient(100deg,#061510ee,#173e32ee,#17132cee);border-bottom:1px solid #f6d99b88;box-shadow:0 10px 35px #0008,0 1px 0 #fff2 inset}
+.brand-seal{position:relative;isolation:isolate;border:2px solid var(--wow-gold);color:#fff2ce;box-shadow:0 0 0 5px #f8d78b22,0 0 20px #f8d78b99,0 0 55px #f8d78b66;animation:wowSeal 3s ease-in-out infinite}
+.brand-seal:after{content:"";position:absolute;inset:-9px;border:1px dashed #f6d99b99;border-radius:50%;animation:wowSpin 18s linear infinite}
+.top-link{border:1px solid #f4d99b66;border-radius:30px;padding:9px 15px;background:linear-gradient(120deg,#ffffff18,#ffffff04);box-shadow:0 4px 18px #0003;transition:.3s}
+.top-link:hover{color:#12271f;background:linear-gradient(110deg,#ffe6ad,#c7954e);box-shadow:0 0 28px #f4d28eaa;transform:translateY(-3px)}
+.hero{min-height:760px;border-radius:0 0 42px 42px;isolation:isolate;box-shadow:0 35px 90px #000b,0 1px 0 #fff5 inset;background-image:linear-gradient(90deg,#04140fee 0%,#0b241dd9 38%,#10271c55 72%,#101b1740),linear-gradient(0deg,#061711ee,transparent 64%),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=90');background-position:center 54%;background-size:cover}
+.hero:before{content:"";position:absolute;inset:-10%;z-index:0;pointer-events:none;opacity:.8;background-image:radial-gradient(circle,#ffe6b8 0 1px,transparent 2px),radial-gradient(circle,#9cebd6 0 1px,transparent 2px),radial-gradient(circle,#fff 0 1px,transparent 2px);background-size:89px 89px,137px 137px,211px 211px;background-position:0 0,45px 65px,90px 20px;animation:wowParticles 38s linear infinite}
+.hero:after{content:"";position:absolute;z-index:0;inset:-30%;pointer-events:none;background:conic-gradient(from 0deg at 70% 50%,transparent 0deg,#ffe3a01c 28deg,transparent 62deg,#7ce5ca18 110deg,transparent 160deg);filter:blur(18px);animation:wowAurora 18s ease-in-out infinite alternate}
+.hero-shade{z-index:0;background:radial-gradient(ellipse at 72% 45%,transparent 0,#06171144 55%,#061711aa 100%)}
+.hero-copy{width:min(800px,74%);padding-top:110px;padding-bottom:140px;animation:wowEntrance 1.15s cubic-bezier(.16,1,.3,1) both}
+.hero .eyebrow{font-size:14px;color:#ffe2a0;text-shadow:0 0 18px #f3ce82}
+.hero .eyebrow span{height:2px;width:42px;box-shadow:0 0 15px #ffe2a0}
+.hero h1{font-size:clamp(64px,8.5vw,112px);line-height:1.02;letter-spacing:-.055em;text-shadow:0 7px 35px #000,0 0 50px #0008}
+.hero h1 em{display:inline-block;color:#ffe2a0;text-shadow:0 0 12px #ffe2a0,0 0 36px #e8b95f,0 0 80px #e8b95f88;animation:wowText 4s ease-in-out infinite}
+.hero h1 .with-name{color:#fff; text-shadow:0 3px 25px #000}
+.hero-lead{font-size:21px;color:#fff;text-shadow:0 2px 15px #000;max-width:650px}
+.primary-cta{border:1px solid #fff4;background:linear-gradient(110deg,#fff0bf,#e2b968 45%,#b9823e);color:#14271f;padding:18px 34px;font-size:18px;border-radius:50px;box-shadow:0 10px 28px #0008,0 0 0 5px #f4d28e20,0 0 40px #f4d28e77;animation:wowPulse 3.4s ease-in-out infinite}
+.primary-cta:before{content:"";position:absolute;inset:-3px;border:1px solid #ffe7b5;border-radius:inherit;opacity:.6;animation:wowRing 2.6s ease-out infinite}
+.primary-cta:hover{transform:translateY(-6px) scale(1.045);box-shadow:0 18px 45px #0009,0 0 55px #f4d28eaa}
+.hero-proof{font-size:14px;color:#fff;text-shadow:0 2px 8px #000}
+.hero-caption{background:#071a15b8;border:1px solid #f4d28e88;border-right:3px solid #ffe2a0;border-radius:14px;padding:13px 18px;backdrop-filter:blur(14px);box-shadow:0 12px 35px #0008,0 0 25px #e9c67b22}
+.intro-strip{margin-top:-55px;position:relative;z-index:4;border:1px solid #fff;border-radius:26px;padding:32px;background:linear-gradient(120deg,#fffefaee,#f4e6c9ed);box-shadow:0 25px 70px #0009,0 0 0 1px #f6d99b77,0 0 45px #e9c67b22;backdrop-filter:blur(20px)}
+.intro-strip>div{transition:transform .35s}
+.intro-strip>div:hover{transform:translateY(-7px)}
+.strip-icon{width:56px;height:56px;flex-basis:56px;border:2px solid #c99c55;color:#77501f;box-shadow:0 0 0 6px #d4b16a22,0 8px 25px #77501f22;background:linear-gradient(145deg,#fff,#f3dfb8)}
+.grades-section{padding:44px 0 65px}
+.section-heading h2{font-size:clamp(38px,5vw,56px);color:#ffe5b0;-webkit-text-fill-color:#ffe5b0;text-shadow:0 0 28px #e5c17b55,0 5px 20px #0008}
+.section-heading>p{color:#e1eee7;font-size:16px}
+.eyebrow.dark{color:#f4d28e}
+.grade-grid{gap:24px;perspective:1200px}
+.grade-card{isolation:isolate;min-height:285px;padding:32px 27px;border:1px solid #fff;border-radius:26px;background:linear-gradient(145deg,#fff 0%,#f9efd9 58%,#e6d6b8 100%);box-shadow:0 20px 45px #0007,0 1px 0 #fff inset;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s;transform-style:preserve-3d}
+.grade-card:before{width:9px;z-index:-1;box-shadow:0 0 22px currentColor}
+.grade-card:after{width:250px;height:250px;left:-75px;bottom:-120px;border:2px solid #c8a66b88;box-shadow:0 0 0 18px #c8a66b20,0 0 0 38px #c8a66b14,0 0 0 62px #c8a66b0d;transition:transform .7s}
+.grade-card .grade-number{font-size:86px;color:#9d7a433d;text-shadow:0 4px 12px #fff}
+.grade-card>strong{font-size:49px;text-shadow:0 2px 0 #fff}
+.grade-card:hover,.grade-card:focus-visible{transform:translateY(-16px) rotateX(3deg) rotateY(-2deg) scale(1.035);box-shadow:0 35px 65px #000a,0 0 0 2px #ffe3a0,0 0 45px #e7bf6b99;outline:none}
+.grade-card:hover:after{transform:scale(1.35) rotate(28deg)}
+.grade-action{padding:11px 17px;border-radius:50px;background:linear-gradient(110deg,#244f40,#0c241d);color:#ffe5ad;border:1px solid #e4c17c88;box-shadow:0 6px 20px #122b2255}
+.learning-area{background:linear-gradient(145deg,#fffdf8,#eee4cf);border:1px solid #fff;border-radius:30px;padding:clamp(22px,4vw,42px);box-shadow:0 30px 80px #0008,0 0 0 1px #e9c67b55}
+.unit-shell{border-radius:26px;box-shadow:0 25px 70px #142d2530,0 0 0 1px #d5ad6977}
+.deep-unit-link{border-radius:18px;border:1px solid #fff;box-shadow:0 12px 30px #142d2522}
+.deep-unit-link:hover{box-shadow:0 20px 45px #142d2544,0 0 0 1px #d5ad69;transform:translateY(-7px) scale(1.015)}
+footer{background:radial-gradient(ellipse at 50% -20%,#3e6a54,#102b22 58%,#071712);border-top:1px solid #f4d28e66;box-shadow:0 -18px 50px #0005}
+@keyframes wowSpin{to{transform:rotate(360deg)}}
+@keyframes wowSeal{0%,100%{box-shadow:0 0 0 5px #f8d78b22,0 0 20px #f8d78b77}50%{box-shadow:0 0 0 9px #f8d78b2b,0 0 42px #f8d78bba}}
+@keyframes wowParticles{from{transform:translate3d(0,0,0)}to{transform:translate3d(-130px,90px,0)}}
+@keyframes wowAurora{from{transform:rotate(-12deg) scale(.95);opacity:.45}to{transform:rotate(18deg) scale(1.12);opacity:.9}}
+@keyframes wowEntrance{from{opacity:0;transform:translateY(45px) scale(.98);filter:blur(5px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes wowText{0%,100%{filter:brightness(1)}50%{filter:brightness(1.28)}}
+@keyframes wowPulse{0%,100%{box-shadow:0 10px 28px #0008,0 0 0 5px #f4d28e20,0 0 25px #f4d28e55}50%{box-shadow:0 14px 35px #0009,0 0 0 9px #f4d28e16,0 0 48px #f4d28eaa}}
+@keyframes wowRing{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.16);opacity:0}}
+@media(max-width:850px){.hero{min-height:650px}.grade-card{min-height:245px}}
+@media(max-width:600px){.hero{min-height:650px;border-radius:0 0 24px 24px;background-position:58% center}.hero-copy{padding:65px 22px 110px;width:100%}.hero h1{font-size:clamp(55px,15vw,72px)}.hero-lead{font-size:17px}.intro-strip{margin-top:18px;padding:20px;border-radius:18px}.grades-section{padding-top:25px}.grade-grid{gap:13px}.grade-card{min-height:220px;padding:20px 14px;border-radius:18px}.grade-card .grade-number{font-size:58px}.grade-card>strong{font-size:35px}.grade-card:hover{transform:translateY(-5px) scale(1.01)}.learning-area{padding:18px;border-radius:18px}}
+@media(prefers-reduced-motion:reduce){.hero:before,.hero:after,.brand-seal,.brand-seal:after,.hero-copy,.hero h1 em,.primary-cta,.primary-cta:before{animation:none!important}.grade-card,.top-link{transition:none!important}}
