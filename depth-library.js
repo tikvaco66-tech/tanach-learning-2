@@ -64,8 +64,8 @@ depth.forEach(([id,title,lead,timeline,terms,questions,games])=>{
    }
    draw();
   }else{
-   let events=timeline.split(/\\s*←\\s*/).map(x=>x.trim()).filter(Boolean);
-   events=events.map(x=>x.replace(/^(ציר זמן|ציר רעיוני|מחזור|מהלך|רצף|טבלה|טבלת השוואה)\\s*:?\\s*/,'').trim()).filter(Boolean);
+   let events=timeline.split(/\s*←\s*/).map(x=>x.trim()).filter(Boolean);
+   events=events.map(x=>x.replace(/^(ציר זמן|ציר רעיוני|מחזור|מהלך|רצף|טבלה|טבלת השוואה)\s*:?\s*/,'').trim()).filter(Boolean);
    if(events.length<3){stage.innerHTML='<p>רצף האירועים ליחידה זו עדיין בהכנה.</p>';return;}
    let selected=[];
    const shuffled=events.slice().reverse();
