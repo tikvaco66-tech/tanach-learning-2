@@ -219,5 +219,5 @@ const game=document.getElementById('sortgame');
 shuffled.forEach((n,i)=>{const row=document.createElement('div');row.className='sort-item';row.innerHTML=`<span>${events[n]}</span><select aria-label="מיקום ברצף"><option value="">בחרו סדר</option>${events.map((_,j)=>`<option value="${j+1}">${j+1}</option>`).join('')}</select>`;game.appendChild(row)});
 function checkSort(){const vals=[...game.querySelectorAll('select')].map(x=>Number(x.value));const correct=[1,2,3,4,5,6];const ok=vals.length===6&&vals.every((v,i)=>v===correct[i])&&new Set(vals).size===6;document.getElementById('sortfeedback').textContent=ok?'כל הכבוד! סידרתם נכון את רצף האירועים.':'עדיין לא מדויק. חשבו מה קורה תחילה, מהן ההכנות, ומה מתרחש רק לאחר כניסת הכוהנים למים.'}
 </script>
-</body>
+<script src="interactive-games.js?v=1"></script></body>
 </html>
