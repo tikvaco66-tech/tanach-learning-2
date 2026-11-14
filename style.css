@@ -153,3 +153,64 @@ footer{background:radial-gradient(ellipse at 50% -20%,#3e6a54,#102b22 58%,#07171
 @media(max-width:850px){.hero{min-height:650px}.grade-card{min-height:245px}}
 @media(max-width:600px){.hero{min-height:650px;border-radius:0 0 24px 24px;background-position:58% center}.hero-copy{padding:65px 22px 110px;width:100%}.hero h1{font-size:clamp(55px,15vw,72px)}.hero-lead{font-size:17px}.intro-strip{margin-top:18px;padding:20px;border-radius:18px}.grades-section{padding-top:25px}.grade-grid{gap:13px}.grade-card{min-height:220px;padding:20px 14px;border-radius:18px}.grade-card .grade-number{font-size:58px}.grade-card>strong{font-size:35px}.grade-card:hover{transform:translateY(-5px) scale(1.01)}.learning-area{padding:18px;border-radius:18px}}
 @media(prefers-reduced-motion:reduce){.hero:before,.hero:after,.brand-seal,.brand-seal:after,.hero-copy,.hero h1 em,.primary-cta,.primary-cta:before{animation:none!important}.grade-card,.top-link{transition:none!important}}
+
+
+/* ===== SIGNATURE EDITION: immersive, premium, maximum visual impact ===== */
+html{scroll-padding-top:95px}
+body{position:relative;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;background-image:linear-gradient(30deg,#ffffff08 12%,transparent 12.5%,transparent 87%,#ffffff08 87.5%),linear-gradient(150deg,#ffffff08 12%,transparent 12.5%,transparent 87%,#ffffff08 87.5%);background-size:54px 94px}
+.topbar{height:92px;padding-inline:max(4vw,22px);border-bottom:1px solid #ffe2a066}
+.brand{gap:16px}
+.brand-seal{width:58px;height:58px;font-size:31px}
+.top-link{font-size:13px;letter-spacing:.01em}
+.hero{min-height:min(820px,88vh);margin-inline:-28px;border-radius:0 0 48px 48px}
+.hero:before{background-image:radial-gradient(circle,#ffe9c7 0 1px,transparent 2px),radial-gradient(circle,#8ee9d2 0 1px,transparent 2px),radial-gradient(circle,#fff 0 1.2px,transparent 2px),radial-gradient(circle,#f2c77b 0 2px,transparent 3px);background-size:83px 83px,131px 131px,197px 197px,277px 277px;background-position:0 0,55px 25px,110px 80px,20px 140px;opacity:.8}
+.hero-copy{width:min(850px,76%);padding-inline:9%;padding-top:clamp(75px,10vh,130px)}
+.hero h1{font-size:clamp(68px,9vw,124px);line-height:.99;margin-block:28px}
+.hero h1 em{background:linear-gradient(100deg,#fff0c7 0%,#d6a957 28%,#fff2ca 50%,#c18b43 72%,#fff0c7 100%);background-size:220% auto;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:wowGoldFlow 7s linear infinite}
+.hero-lead{font-size:clamp(18px,2vw,23px);line-height:1.9;max-width:660px}
+.hero-proof{gap:16px;margin-top:32px}
+.hero-proof i{width:5px;height:5px;box-shadow:0 0 12px #ffe2a0}
+.hero-caption{bottom:34px;left:4%;border-radius:16px;padding:15px 20px}
+.hero-caption b{font-size:15px}
+.primary-cta{font-size:19px;padding:20px 38px;letter-spacing:.01em}
+.intro-strip{padding:34px 40px;margin-bottom:78px}
+.intro-strip>div{padding:5px 8px}
+.strip-icon{width:62px;height:62px;flex-basis:62px;font-size:15px}
+.grades-section{padding-bottom:75px}
+.section-heading{margin-bottom:34px}
+.section-heading h2{font-size:clamp(42px,5.3vw,62px)}
+.section-heading>p{line-height:1.9}
+.grade-grid{gap:26px}
+.grade-card{min-height:310px;padding:35px 30px;overflow:hidden}
+.grade-card:before{width:11px}
+.grade-card:after{width:275px;height:275px;left:-90px;bottom:-140px}
+.grade-card .grade-number{font-size:96px;top:2px;left:20px}
+.grade-label{font-size:15px}
+.grade-card>strong{font-size:54px;margin-top:12px}
+.grade-desc{font-size:15px}
+.grade-action{margin-top:30px;padding:12px 19px;font-size:13px;position:relative;overflow:hidden}
+.grade-action:after{content:"";position:absolute;top:-50%;bottom:-50%;left:-50%;width:28%;transform:skewX(-20deg);background:linear-gradient(90deg,transparent,#fff9,transparent);transition:left .7s}
+.grade-card:hover .grade-action:after{left:140%}
+.grade-card:nth-child(1){background:radial-gradient(circle at 10% 100%,#dce9d2,transparent 55%),linear-gradient(145deg,#fff,#f7f0df)}
+.grade-card:nth-child(2){background:radial-gradient(circle at 10% 100%,#f3dfb8,transparent 55%),linear-gradient(145deg,#fff,#f6eddd)}
+.grade-card:nth-child(3){background:radial-gradient(circle at 10% 100%,#d5e6e1,transparent 55%),linear-gradient(145deg,#fff,#edf2e9)}
+.grade-card:nth-child(4){background:radial-gradient(circle at 10% 100%,#e2d9ef,transparent 55%),linear-gradient(145deg,#fff,#f0ebf5)}
+.learning-area{padding:clamp(25px,4vw,55px);border-radius:34px}
+.empty-state{padding:55px 25px;border-radius:24px}
+.empty-star{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle,#fff4d6,#e8d4a9);box-shadow:0 0 0 9px #d5ad6922,0 0 38px #d5ad6977;font-size:34px}
+.unit-shell{padding:clamp(25px,5vw,55px)}
+.unit-shell h2{font-size:clamp(32px,4vw,48px)}
+.unit-shell article{border:1px solid #e9dfca;border-radius:16px;background:linear-gradient(135deg,#fffdf8,#f2ecdf);box-shadow:0 8px 22px #273b2e0a;padding:20px 22px}
+.unit-shell details{border-radius:12px;background:#f1eadb;padding:10px 13px}
+.deep-unit-list{gap:18px}
+.deep-unit-link{padding:23px;border-radius:20px}
+footer{padding:48px 20px 42px}
+.footer-brand{font-size:20px;letter-spacing:.02em}
+footer p{font-size:14px}
+@keyframes wowGoldFlow{to{background-position:220% center}}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(min-width:1000px){.grade-card:nth-child(2),.grade-card:nth-child(4){animation:cardFloat 6s ease-in-out infinite}.grade-card:nth-child(3){animation:cardFloat 6s ease-in-out 1.5s infinite}}
+@media(max-width:850px){.topbar{height:auto;min-height:82px;flex-wrap:wrap;padding-block:12px}.hero{margin-inline:-28px;min-height:680px}.hero-copy{width:86%;padding-inline:7%}.grade-card{min-height:260px}.grade-card>strong{font-size:44px}}
+@media(max-width:600px){.topbar{gap:7px}.brand{width:100%}.brand-seal{width:48px;height:48px}.hero{margin-inline:-15px;min-height:680px;border-radius:0 0 26px 26px}.hero-copy{width:100%;padding:68px 22px 125px}.hero h1{font-size:clamp(57px,15.5vw,75px);margin-block:22px}.hero-lead{font-size:17px}.hero-caption{left:15px;bottom:18px;padding:10px 13px}.primary-cta{font-size:16px;padding:16px 24px}.intro-strip{padding:19px;margin-bottom:48px}.strip-icon{width:48px;height:48px;flex-basis:48px}.section-heading h2{font-size:38px}.grade-grid{gap:12px}.grade-card{min-height:220px;padding:20px 14px;border-radius:18px}.grade-card .grade-number{font-size:60px;left:10px}.grade-card>strong{font-size:36px}.grade-label,.grade-desc{font-size:12px}.grade-action{margin-top:17px;padding:8px 11px;font-size:11px}.learning-area{padding:16px;border-radius:20px}.empty-state{padding:32px 15px}footer{padding:35px 18px}}
+@media(prefers-reduced-motion:reduce){.hero h1 em,.grade-card{animation:none!important}}
