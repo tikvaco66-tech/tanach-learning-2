@@ -33,7 +33,7 @@ summary{cursor:pointer;font-weight:700;color:#245347}
 </style>
 </head>
 <body>
-<header class="topbar"><a class="brand" href="./"><span class="brand-seal">ת</span><span><strong>יוצאים למסע בעולם התנ״ך</strong><small>לומדים, חוקרים ומגלים עם תקווה</small></span></a><a class="top-link" href="./#grades">לבחירת הכיתה ↓</a></header>
+<header class="topbar"><a class="brand" href="./"><span class="brand-seal">ת</span><span><strong>יוצאים למסע בעולם התנ״ך</strong><small>לומדים, חוקרים ומגלים עם תקוה</small></span></a><a class="top-link" href="./#grades">לבחירת הכיתה ↓</a></header>
 <main class="unit-shell">
 <a class="unit-back" href="./#grades">← חזרה לבחירת הכיתה</a>
 <div class="unit-meta">כיתה ג׳ · סיפורי יצחק ויעקב · יחידה 16 · בראשית כ״ז, פסוקים א׳–מ״ו</div>
@@ -130,7 +130,7 @@ summary{cursor:pointer;font-weight:700;color:#245347}
 <h2>פעילות משחקית מסכמת</h2>
 <div class="info-card"><h3>״מי אני במשפחה?״ – ארבע נקודות מבט</h3>
 <ol><li>מתחלקים לארבע קבוצות: יצחק, רבקה, יעקב ועשו.</li><li>כל קבוצה בוחרת שלושה אירועים בפרק ומספרת אותם מנקודת המבט של הדמות שלה.</li><li>הקבוצות מציגות את הסיפור, והכיתה מזהה מה כל דמות יודעת, מה היא מרגישה ומה היא מסתירה.</li><li>בסיום בונים יחד ״מפת משפחה״: רצונות, חששות, פעולות ותוצאות.</li></ol>
-<p><b>אתגר יצירתי:</b> עצבו כרטיס ברכה לכל אחת מהדמויות. הברכה צריכה להתייחס לצורך או לתקווה של הדמות, ולא רק להצלחה חומרית.</p></div>
+<p><b>אתגר יצירתי:</b> עצבו כרטיס ברכה לכל אחת מהדמויות. הברכה צריכה להתייחס לצורך או לתקוה של הדמות, ולא רק להצלחה חומרית.</p></div>
 
 <h2>מאגר חומרי משרד החינוך – מיון לפי קטגוריות</h2>
 <p>הקישורים הבאים נאספו מדף משרד החינוך על בראשית כ״ז. חלקם מיועדים במקור לחטיבה העליונה או למורים; הם מסומנים בהתאם ואינם מוצגים כחומר חובה לתלמידי כיתה ג׳. קישורים חיצוניים עשויים להשתנות או לרדת מהרשת.</p>
@@ -190,7 +190,7 @@ summary{cursor:pointer;font-weight:700;color:#245347}
 <div class="note"><b>הערת מקור:</b> דף משרד החינוך ״בראשית כ״ז: יעקב ועשו – גנבת הברכות״ משמש כאן כמפת מקורות והעשרה. התוכן הלימודי באתר זה נכתב מחדש, והקישורים החיצוניים מובילים למקורות המקוריים. בדף משרד החינוך היחידה משויכת לחטיבה העליונה; במאגר שלנו היא משולבת כרצף יחידה 16 בכיתה ג׳, ולכן החומרים המתקדמים מסומנים כהעשרה למורה.</div>
 <p style="margin-top:28px"><a class="unit-back" href="./#grades">← חזרה למסע ולבחירת יחידה</a></p>
 </main>
-<footer><div class="footer-brand">יוצאים למסע בעולם התנ״ך <span>✦</span> עם תקווה</div><p>לומדים את העבר, חושבים על ההווה ומגלים ערכים שילוו אותנו הלאה.</p></footer>
+<footer><div class="footer-brand">יוצאים למסע בעולם התנ״ך <span>✦</span> עם תקוה</div><p>לומדים את העבר, חושבים על ההווה ומגלים ערכים שילוו אותנו הלאה.</p></footer>
 <script>
 const questions=[
 ["מה ביקש יצחק מעשו לעשות לפני הברכה?",["לצאת לצוד ולהכין מטעמים","לצאת למסע","לחפור באר"],0],
@@ -208,4 +208,4 @@ const quiz=document.getElementById("quiz"),result=document.getElementById("quiz-
 function drawQuiz(){score=0;answered=0;result.textContent="";quiz.innerHTML="";questions.forEach((q,i)=>{const d=document.createElement("div");d.className="quiz-question";const h=document.createElement("b");h.textContent=(i+1)+". "+q[0];d.appendChild(h);q[1].forEach((a,j)=>{const b=document.createElement("button");b.textContent=a;b.onclick=()=>{if(d.dataset.done)return;d.dataset.done="1";answered++;if(j===q[2]){score++;b.textContent+=" ✓";}else{b.textContent+=" – התשובה הנכונה: "+q[1][q[2]];}d.querySelectorAll("button").forEach(x=>x.disabled=true);if(answered===questions.length)result.textContent="סיימתם! הציון: "+score+" מתוך "+questions.length;};d.appendChild(b);});quiz.appendChild(d);});}
 document.getElementById("restart").onclick=drawQuiz;drawQuiz();
 </script>
-</body></html>
+<script src="interactive-games.js?v=1"></script></body></html>
