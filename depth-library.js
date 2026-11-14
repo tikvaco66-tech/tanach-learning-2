@@ -14,6 +14,19 @@ style.textContent=`
 .depth-games{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
 .depth-game{background:#fff8e8;border-right:4px solid #c89b4b;padding:12px;border-radius:10px}
 .depth-tag{display:inline-block;background:#174b40;color:white;border-radius:30px;padding:4px 11px;font-size:12px;font-weight:bold;margin-bottom:8px}
+.depth-play,.depth-game-next,.depth-game-check,.depth-game-reset,.depth-game-restart{display:inline-block;margin-top:9px;padding:9px 14px;border:0;border-radius:9px;background:#174b40;color:#fff;font:inherit;font-weight:800;cursor:pointer}
+.depth-game-stage{margin-top:12px;padding:13px;background:#fff;border:1px solid #d9e5dc;border-radius:12px}
+.depth-game-stage h5{font-size:16px;margin:5px 0 10px;color:#174b40}
+.depth-game-progress{font-size:12px;color:#8a652b;font-weight:800}
+.depth-game-options,.depth-timeline-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.depth-game-options button,.depth-timeline-options button{padding:9px;border:1px solid #cbdcd0;border-radius:9px;background:#f4f8f5;color:#20483f;font:inherit;cursor:pointer;text-align:right}
+.depth-game-options button:disabled,.depth-timeline-options button:disabled{opacity:.55;cursor:default}
+.depth-game-options button.is-correct{background:#e3f3e7;border-color:#4c9b67;font-weight:800}
+.depth-game-feedback{min-height:1.5em;font-weight:800}
+.depth-game-feedback.is-success{color:#237346}
+.depth-timeline-picked{margin:12px 0;padding:10px;background:#f5f7f2;border-radius:8px;line-height:1.9}
+.depth-game-result{font-size:20px;font-weight:900;color:#174b40}
+.depth-game-stage [hidden]{display:none!important}
 @media(max-width:600px){.depth-panel{padding:14px}.depth-questions{columns:1}}
 `;
 document.head.appendChild(style);
@@ -24,7 +37,53 @@ depth.forEach(([id,title,lead,timeline,terms,questions,games])=>{
  panel.innerHTML='<span class="depth-tag">יחידת עומק מורחבת</span><h4>'+title+'</h4><p class="depth-lead">'+lead+'</p>'+
  '<div class="depth-grid"><div class="depth-card"><b>מסלול הלמידה</b><p>'+timeline+'</p></div><div class="depth-card"><b>מושגי מפתח</b><p>'+terms+'</p></div><div class="depth-card"><b>איך נלמד?</b><p>קריאה צמודה בפסוקים, איתור ראיות, בניית רצף, השוואת דמויות ונימוק מסקנות. בכל תשובה יש לציין פרט מן הכתוב שמבסס אותה.</p></div></div>'+
  '<details open><summary>עשר שאלות עומק וחשיבה</summary><ol class="depth-questions">'+q.map(x=>'<li>'+x+'</li>').join('')+'</ol></details>'+
- '<div class="depth-grid depth-games"><div class="depth-game"><b>משחק 1 · '+gs[0].split(':')[0]+'</b><p>'+gs[0].split(':').slice(1).join(':')+'</p></div><div class="depth-game"><b>משחק 2 · '+gs[1].split(':')[0]+'</b><p>'+gs[1].split(':').slice(1).join(':')+'</p></div></div>';
+ '<div class="depth-grid depth-games"><div class="depth-game"><b>משחק 1 · '+gs[0].split(':')[0]+'</b><p>'+gs[0].split(':').slice(1).join(':')+'</p><button type="button" class="depth-play" data-game="quiz">הפעלת המשחק ←</button><div class="depth-game-stage" data-stage="quiz" hidden></div></div><div class="depth-game"><b>משחק 2 · '+gs[1].split(':')[0]+'</b><p>'+gs[1].split(':').slice(1).join(':')+'</p><button type="button" class="depth-play" data-game="timeline">הפעלת המשחק ←</button><div class="depth-game-stage" data-stage="timeline" hidden></div></div></div>';
  unit.appendChild(panel);
+ const playButtons=panel.querySelectorAll('.depth-play');
+ playButtons.forEach(button=>button.addEventListener('click',()=>{
+  const kind=button.dataset.game,stage=panel.querySelector('[data-stage="'+kind+'"]');
+  stage.hidden=false; button.hidden=true;
+  if(kind==='quiz'){
+   const questions=(window.tanachQuizData&&window.tanachQuizData[id])||[];
+   if(!questions.length){stage.innerHTML='<p>החידון ליחידה זו עדיין בהכנה.</p>';return;}
+   let index=0,score=0,locked=false;
+   function draw(){
+    locked=false; const item=questions[index];
+    stage.innerHTML='<p class="depth-game-progress">שאלה '+(index+1)+' מתוך '+questions.length+'</p><h5>'+item[0]+'</h5><div class="depth-game-options">'+item[1].map((answer,i)=>'<button type="button" data-answer="'+i+'">'+answer+'</button>').join('')+'</div><p class="depth-game-feedback" aria-live="polite"></p><button type="button" class="depth-game-next" hidden>לשאלה הבאה ←</button>';
+    stage.querySelectorAll('[data-answer]').forEach(option=>option.addEventListener('click',()=>{
+     if(locked)return; locked=true; const correct=Number(option.dataset.answer)===item[2]; if(correct)score++;
+     stage.querySelectorAll('[data-answer]').forEach((b,i)=>{b.disabled=true;if(i===item[2])b.classList.add('is-correct');});
+     stage.querySelector('.depth-game-feedback').textContent=(correct?'כל הכבוד! תשובה נכונה. ':'לא הפעם. ')+item[3];
+     stage.querySelector('.depth-game-next').hidden=false;
+    }));
+    stage.querySelector('.depth-game-next').addEventListener('click',()=>{
+     index++;
+     if(index<questions.length)draw();
+     else{stage.innerHTML='<h5>סיימתם את האתגר!</h5><p class="depth-game-result">צברתם '+score+' מתוך '+questions.length+' נקודות.</p><button type="button" class="depth-game-restart">לשחק שוב</button>';stage.querySelector('.depth-game-restart').onclick=()=>{index=0;score=0;draw();};}
+    });
+   }
+   draw();
+  }else{
+   let events=timeline.split(/\\s*←\\s*/).map(x=>x.trim()).filter(Boolean);
+   events=events.map(x=>x.replace(/^(ציר זמן|ציר רעיוני|מחזור|מהלך|רצף|טבלה|טבלת השוואה)\\s*:?\\s*/,'').trim()).filter(Boolean);
+   if(events.length<3){stage.innerHTML='<p>רצף האירועים ליחידה זו עדיין בהכנה.</p>';return;}
+   let selected=[];
+   const shuffled=events.slice().reverse();
+   stage.innerHTML='<p>לחצו על האירועים לפי הסדר שבו התרחשו. בחרו את כולם ואז בדקו את התשובה.</p><div class="depth-timeline-options">'+shuffled.map((event,i)=>'<button type="button" data-event="'+i+'">'+event+'</button>').join('')+'</div><p class="depth-game-feedback" aria-live="polite"></p><div class="depth-timeline-picked"></div><button type="button" class="depth-game-check">בדיקת הרצף</button><button type="button" class="depth-game-reset">התחלה מחדש</button>';
+   const picked=stage.querySelector('.depth-timeline-picked'),feedback=stage.querySelector('.depth-game-feedback');
+   function paint(){picked.innerHTML='<b>הרצף שבחרתם:</b> '+selected.map((v,i)=>(i+1)+'. '+v).join(' ← ');}
+   stage.querySelectorAll('[data-event]').forEach(option=>option.addEventListener('click',()=>{
+    if(option.disabled)return; selected.push(shuffled[Number(option.dataset.event)]);option.disabled=true;paint();
+   }));
+   stage.querySelector('.depth-game-check').onclick=()=>{
+    if(selected.length!==events.length){feedback.textContent='עוד לא בחרתם את כל האירועים. השלימו את הרצף.';return;}
+    const correct=selected.every((v,i)=>v===events[i]);
+    feedback.textContent=correct?'מצוין! סידרתם את כל האירועים בסדר הנכון.':'עדיין לא מדויק. נסו שוב, והיעזרו במסלול הלמידה שמופיע למעלה.';
+    feedback.classList.toggle('is-success',correct);
+   };
+   stage.querySelector('.depth-game-reset').onclick=()=>{selected=[];stage.querySelectorAll('[data-event]').forEach(x=>x.disabled=false);feedback.textContent='';feedback.classList.remove('is-success');paint();};
+   paint();
+  }
+ }));
 });
 })();
