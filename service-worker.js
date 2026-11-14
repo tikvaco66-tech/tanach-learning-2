@@ -1,4 +1,4 @@
-const CACHE = "masa-batanach-v27";
+const CACHE = "masa-batanach-v28";
 const ASSETS = [
  "./","./index.html","./style.css?v=12","./app.js?v=15","./chapter-menu.js?v=2",
  "./interactive-games.js?v=1","./depth-extended-games.js?v=1","./depth-library.js?v=2",
