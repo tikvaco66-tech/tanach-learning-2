@@ -1,6 +1,6 @@
-const CACHE = "masa-batanach-v23";
+const CACHE = "masa-batanach-v24";
 const ASSETS = [
- "./","./index.html","./style.css?v=12","./app.js?v=14","./chapter-menu.js?v=1",
+ "./","./index.html","./style.css?v=12","./app.js?v=15","./chapter-menu.js?v=2",
  "./interactive-games.js?v=1","./depth-extended-games.js?v=1","./depth-library.js?v=2",
  "./chapters.html","./all-required-chapters.html","./curriculum-grades-3-6.html",
  "./grade3-genesis-24.html","./grade3-genesis-25.html","./grade3-genvat-habrachot.html",
