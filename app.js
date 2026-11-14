@@ -8,6 +8,7 @@ const deepUnits={
  "6":[["חציית הירדן – צעד אל הארץ","יהושע ג׳","grade6-joshua-3.html"]]
 };
 document.querySelectorAll(".grade-card").forEach(b=>b.addEventListener("click",()=>{
+ if(["4","6"].includes(b.dataset.grade)) return; // כיתות ד׳ ו׳ מנוהלות על ידי chapter-menu.js
  const g=b.dataset.grade,arr=deepUnits[g]||[],area=document.getElementById("content"),label=b.querySelector("strong").textContent;
  area.innerHTML=`<section class="unit-shell"><button class="unit-back" id="back-to-grades">← חזרה לבחירת הכיתה</button><div class="unit-meta">מסע בתנ״ך · ${label}</div><h2>בחרו פרק או יחידת לימוד</h2><p>המסע שלכם מחכה כאן. בחרו את הפרק שתרצו ללמוד.</p><div class="deep-unit-list">${arr.map((x,i)=>x[2]==="in-app"?`<button class="deep-unit-link chapter-button" data-unit="${i}"><span><strong>${x[0]}</strong><small>${x[1]}</small></span><b>פתיחת הפרק ←</b></button>`:`<a class="deep-unit-link" href="${x[2]}"><span><strong>${x[0]}</strong><small>${x[1]}</small></span><b>פתיחת הפרק ←</b></a>`).join("")}<a class="deep-unit-link grade-map-link" href="all-required-chapters.html#g${g}"><span><strong>מפת כל פרקי החובה – ${label}</strong><small>כל הספרים, הפרקים וטווחי הפסוקים של שכבת הגיל</small></span><b>לפתיחת מפת הפרקים ←</b></a></div></section>`;
  document.getElementById("back-to-grades").onclick=()=>document.getElementById("grades").scrollIntoView({behavior:"smooth"});
