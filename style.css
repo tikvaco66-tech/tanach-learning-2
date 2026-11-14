@@ -51,3 +51,46 @@ footer:before{content:"✦  ✧  ✦  ✧  ✦";position:absolute;inset:10px 0 a
 @keyframes sealGlow{0%,100%{box-shadow:0 0 0 5px #d5ad6912,0 0 14px #e9c88722}50%{box-shadow:0 0 0 7px #d5ad691a,0 0 28px #e9c88777}}
 @media(max-width:600px){.intro-strip{margin-top:18px;border-radius:15px}.grade-card{border-radius:16px}.grade-card:hover{transform:translateY(-4px)}.hero:before{opacity:.55}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* === עדכון חזותי בולט: מהדורת מסע זוהרת === */
+body{background:#101e1b}
+.topbar{height:86px;background:linear-gradient(100deg,#071713 0%,#183d32 52%,#0b211c 100%);border-bottom:1px solid #e7c78366}
+.brand-seal{width:52px;height:52px;font-size:29px;border:2px solid #f2d394;box-shadow:0 0 0 5px #f2d39422,0 0 34px #f2d39499, inset 0 0 15px #f2d39433}
+.brand strong{font-size:18px}.brand small{font-size:12px;color:#f0d9ad}
+.top-link{padding:10px 14px;border:1px solid #e8c98f55;border-radius:30px;background:#ffffff0b;transition:.25s}
+.top-link:hover{background:#e7c783;color:#10251f;box-shadow:0 0 22px #e7c78366}
+.hero{min-height:680px;border-radius:0 0 34px 34px;box-shadow:0 25px 65px #071b16aa;background-image:linear-gradient(90deg,rgba(3,16,13,.94),rgba(9,31,24,.76) 44%,rgba(12,34,27,.08)),linear-gradient(0deg,rgba(4,18,14,.82),transparent 70%),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=85')}
+.hero:before{inset:0;background-image:radial-gradient(circle,#f6d99caa 1px,transparent 2px),radial-gradient(circle,#ffffff77 1px,transparent 2px);background-size:73px 73px,117px 117px;animation:starDrift 22s linear infinite;opacity:.65}
+.hero:after{background:linear-gradient(115deg,transparent 25%,#f4d99b30 48%,transparent 68%),radial-gradient(ellipse at 75% 45%,#f4d99b33,transparent 48%);mix-blend-mode:screen}
+.hero-copy{width:min(760px,72%);padding-top:90px;padding-bottom:120px}
+.hero h1{font-size:clamp(58px,7.5vw,100px);text-shadow:0 5px 35px #000b}
+.hero h1 em{color:#ffe0a0;text-shadow:0 0 18px #f1c979,0 0 48px #e9bc6c88}
+.hero-lead{font-size:20px;color:#fff;max-width:620px;text-shadow:0 2px 12px #000}
+.primary-cta{padding:17px 30px;font-size:17px;box-shadow:0 12px 36px #0008,0 0 0 2px #fff5 inset,0 0 32px #eac47b66}
+.hero-proof{font-size:14px;color:#fff}
+.hero-caption{background:#071b16aa;padding:12px 18px;border:1px solid #f2d39466;border-right:3px solid #f2d394;border-radius:12px;backdrop-filter:blur(10px)}
+.intro-strip{margin-top:-48px;padding:30px 34px;border-radius:24px;background:linear-gradient(120deg,#fffefaee,#f2e6ccf2);border:1px solid #fff;box-shadow:0 24px 65px #081c1766}
+.strip-icon{width:52px;height:52px;flex-basis:52px;font-size:14px;border:2px solid #c7a363;color:#76501f;box-shadow:0 0 0 6px #c7a36320,0 7px 20px #70501d22}
+.intro-strip strong{font-size:16px;color:#17382e}.intro-strip small{font-size:13px}
+.grades-section{padding:30px 0 55px}
+.section-heading h2{font-size:clamp(36px,5vw,52px);color:#f7e4bd;background:none;-webkit-text-fill-color:#f7e4bd;text-shadow:0 3px 22px #d4b06b55}
+.section-heading>p{color:#d4dfd7;font-size:16px}
+.eyebrow.dark{color:#e6c58b}
+.grade-grid{gap:22px}
+.grade-card{min-height:260px;padding:30px 26px;border:1px solid #f4dfb788;border-radius:25px;background:linear-gradient(145deg,#fff 0%,#f7edda 58%,#e7dcc4 100%);box-shadow:0 18px 42px #0005,inset 0 2px #fff;transform:translateZ(0)}
+.grade-card:before{width:10px;box-shadow:0 0 20px currentColor}
+.grade-card:after{width:230px;height:230px;border:2px solid #c8a66b77;box-shadow:0 0 0 18px #c8a66b18,0 0 0 38px #c8a66b10,0 0 0 60px #c8a66b09}
+.grade-number{font-size:76px;color:#a17b3c35}
+.grade-label{font-size:14px;color:#74644b}
+.grade-card>strong{font-size:46px}
+.grade-desc{font-size:14px;color:#4b5c51}
+.grade-action{margin-top:25px;padding:10px 16px;background:linear-gradient(100deg,#244f40,#102a22);color:#ffe1a2;border:1px solid #cda96766;box-shadow:0 5px 15px #142b2340}
+.grade-action b{font-size:21px}
+.grade-card:hover,.grade-card:focus-visible{transform:translateY(-13px) scale(1.025);box-shadow:0 30px 60px #0008,0 0 0 2px #f0ce8a,0 0 38px #d8b36c55}
+.learning-area{background:#f7f1e5;border-radius:28px;padding:35px;margin:10px 0 70px;box-shadow:0 20px 60px #0004}
+.empty-state{border:1px dashed #bda16d}
+footer{border-top:1px solid #d9b66f66}
+@media(max-width:850px){.hero{min-height:610px}.grade-grid{gap:14px}}
+@media(max-width:600px){.topbar{height:auto;min-height:70px;flex-wrap:wrap;gap:8px;padding:12px}.brand{width:100%}.top-link{font-size:11px;padding:7px 9px}.hero{min-height:620px;border-radius:0 0 22px 22px}.hero-copy{width:100%;padding:62px 24px 110px}.hero h1{font-size:58px}.hero-lead{font-size:17px}.intro-strip{margin-top:18px;padding:20px}.grades-section{padding-top:20px}.grade-card{min-height:215px;padding:20px 15px}.grade-card>strong{font-size:35px}.grade-number{font-size:55px}.learning-area{padding:18px;margin-bottom:40px}}
+@media(prefers-reduced-motion:reduce){.hero:before,.brand-seal{animation:none}}
