@@ -29,4 +29,18 @@
 <section id="content" class="learning-area" aria-live="polite"><div class="empty-state"><span class="empty-star">✦</span><h2>הפרק הבא מחכה לכם</h2><p>בחרו כיתה כדי לראות את הפרקים ויחידות הלימוד הזמינים בה.</p></div></section>
 </main><footer><div class="footer-brand">יוצאים למסע בעולם התנ״ך <span>✦</span> עם תקוה</div><p>לומדים את העבר, חושבים על ההווה ומגלים ערכים שילוו אותנו הלאה.</p></footer>
 <script defer src="chapter-menu.js?v=2"></script><script defer src="app.js?v=15"></script><script>if("serviceWorker"in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js"));}</script>
-</body></html>
+<script>
+(function(){
+  function removeCurriculumSource(){
+    document.querySelectorAll("p,div,section,footer,small,li").forEach(function(el){
+      if(el.children.length && Array.from(el.children).some(function(child){return /מקור תוכנית הלימודים/.test(child.textContent||"");})) return;
+      var t=(el.textContent||"").replace(/\\s+/g," ");
+      if(t.includes("מקור תוכנית הלימודים") && (t.includes("תנ״ך ממלכתי") || t.includes("תנ\"ך ממלכתי") || t.includes("929"))){
+        el.remove();
+      }
+    });
+  }
+  removeCurriculumSource();
+  new MutationObserver(removeCurriculumSource).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>\n</body></html>
