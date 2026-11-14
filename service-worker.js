@@ -1,5 +1,5 @@
-const CACHE = "masa-batanach-v12";
-const ASSETS = ["./","./index.html","./style.css","./app.js?v=11","./grade3-genvat-habrachot.html","./all-required-chapters.html","./grade3-genesis-24.html","./grade3-genesis-25.html","./grade6-joshua-3.html","./curriculum-grades-3-6.html","./chapters.html","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png"];
+const CACHE = "masa-batanach-v13";
+const ASSETS = ["./","./index.html","./style.css?v=8","./app.js?v=11","./grade3-genvat-habrachot.html","./all-required-chapters.html","./grade3-genesis-24.html","./grade3-genesis-25.html","./grade6-joshua-3.html","./curriculum-grades-3-6.html","./chapters.html","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
   self.skipWaiting();
