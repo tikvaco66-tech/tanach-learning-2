@@ -1,6 +1,6 @@
 const CACHE = "masa-batanach-v32";
 const ASSETS = [
- "./","./index.html","./style.css?v=12","./app.js?v=17","./chapter-menu.js?v=2",
+ "./","./index.html","./style.css?v=12","./app.js?v=18","./chapter-menu.js?v=2",
  "./interactive-games.js?v=1","./depth-extended-games.js?v=1","./depth-library.js?v=2",
  "./chapters.html","./all-required-chapters.html","./curriculum-grades-3-6.html",
  "./grade3-genesis-24.html","./grade3-genesis-25.html","./grade3-genesis-37-13-36.html","./grade3-genvat-habrachot.html",
